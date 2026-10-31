@@ -1,0 +1,4 @@
+{"representedSeconds":3600,"mode":"accelerated","at":"2026-10-31T17:42:20.479Z","event":"api_offline"}
+{"enqueued":720,"at":"2026-10-31T17:42:23.777Z","event":"gateway_sigkill"}
+{"port":39391,"at":"2026-10-31T17:42:28.360Z","event":"api_restored"}
+{"readingId":"r-0-0","at":"2026-10-31T17:42:28.384Z","event":"ack_dropped_after_commit"}

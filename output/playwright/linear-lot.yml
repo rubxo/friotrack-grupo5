@@ -1,0 +1,133 @@
+- generic [ref=e3]:
+  - complementary [ref=e4]:
+    - link "FríoTrack inicio" [ref=e5] [cursor=pointer]:
+      - /url: /
+      - text: FríoTrack
+    - navigation "Secciones" [ref=e12]:
+      - button "Operación" [ref=e13] [cursor=pointer]
+      - button "Trazabilidad" [ref=e16] [cursor=pointer]
+      - button "Integridad" [ref=e22] [cursor=pointer]
+      - button "Proyecto" [ref=e26] [cursor=pointer]
+    - generic [ref=e30]: DynamoDB Local
+  - main [ref=e37]:
+    - generic [ref=e38]:
+      - generic [ref=e39]:
+        - text: Centro de control
+        - strong [ref=e42]: Operación
+      - generic [ref=e43]:
+        - generic [ref=e44]: Demostración local
+        - generic [ref=e45]: JR
+    - generic [ref=e46]:
+      - generic [ref=e47]:
+        - generic [ref=e48]:
+          - paragraph [ref=e49]: domingo, 25 de octubre de 2026
+          - heading "Cada lote, bajo control." [level=1] [ref=e50]
+          - paragraph [ref=e51]: Supervisa la temperatura y responde a los eventos de tu cadena de frío.
+        - button "Actualizar" [ref=e52] [cursor=pointer]
+      - region "Resumen" [ref=e59]:
+        - generic [ref=e60]:
+          - text: Lotes monitoreados
+          - strong [ref=e61]: "3"
+          - text: Exportaciones en demostración
+        - generic [ref=e66]:
+          - text: Sensores registrados
+          - strong [ref=e67]: "4"
+          - text: Último estado registrado
+        - generic [ref=e70]:
+          - text: Alarmas pendientes
+          - strong [ref=e71]: "26"
+          - text: Abiertas y reconocidas
+        - generic [ref=e74]:
+          - text: Lecturas en pantalla
+          - strong [ref=e75]: "72"
+          - text: Historial del periodo seleccionado
+      - generic [ref=e80]:
+        - heading "Lotes de exportación" [level=2] [ref=e81]
+        - generic [ref=e82]: 3 lotes disponibles
+      - generic [ref=e83]:
+        - button "FT-2026-001 Revisar Rosas de exportación Finca La Sabana 2 sensores 2–8 °C" [ref=e86] [cursor=pointer]:
+          - generic [ref=e87]:
+            - text: FT-2026-001
+            - generic [ref=e88]: Revisar
+          - strong [ref=e89]: Rosas de exportación
+          - generic [ref=e90]: Finca La Sabana
+          - generic [ref=e94]:
+            - text: 2 sensores
+            - generic [ref=e95]: 2–8 °C
+        - button "FT-2026-002 Normal Aguacate Hass Finca El Retiro 1 sensores 4–7 °C" [active] [pressed] [ref=e98] [cursor=pointer]:
+          - generic [ref=e99]:
+            - text: FT-2026-002
+            - generic [ref=e100]: Normal
+          - strong [ref=e101]: Aguacate Hass
+          - generic [ref=e102]: Finca El Retiro
+          - generic [ref=e106]:
+            - text: 1 sensores
+            - generic [ref=e107]: 4–7 °C
+        - button "FT-2026-003 Normal Arándanos Finca Santa Elena 1 sensores 0–4 °C" [ref=e110] [cursor=pointer]:
+          - generic [ref=e111]:
+            - text: FT-2026-003
+            - generic [ref=e112]: Normal
+          - strong [ref=e113]: Arándanos
+          - generic [ref=e114]: Finca Santa Elena
+          - generic [ref=e118]:
+            - text: 1 sensores
+            - generic [ref=e119]: 0–4 °C
+      - generic [ref=e122]:
+        - generic [ref=e123]:
+          - generic [ref=e124]:
+            - generic [ref=e125]:
+              - heading "Temperatura del lote" [level=2] [ref=e126]
+              - paragraph [ref=e127]: Aguacate Hass · Sensor S-003
+            - generic [ref=e128]:
+              - text: Periodo
+              - combobox "Periodo" [ref=e129]:
+                - option "24 horas"
+                - option "48 horas" [selected]
+                - option "7 días"
+                - option "21 días"
+          - generic [ref=e130]: Temperatura registradaRango permitido
+          - img "Gráfica de 72 lecturas de temperatura del lote FT-2026-002" [ref=e590]:
+            - generic [ref=e592]: 0°
+            - generic [ref=e594]: 4°
+            - generic [ref=e596]: 8°
+            - generic [ref=e598]: 12°
+            - generic [ref=e600]: 16°
+            - generic [ref=e603]: 07:00 p. m.
+            - generic [ref=e604]: 06:40 p. m.
+          - generic [ref=e148]:
+            - generic [ref=e149]: Datos sintéticos persistidos en DynamoDB
+            - button "Simular excursión" [ref=e151] [cursor=pointer]
+        - generic [ref=e154]:
+          - heading "Ficha de envío" [level=2] [ref=e155]
+          - heading "Aguacate Hass" [level=3] [ref=e605]
+          - generic [ref=e163]:
+            - term [ref=e164]: Ruta
+            - definition [ref=e165]: Antioquia → Cartagena → Rotterdam
+            - term [ref=e166]: Transportador
+            - definition [ref=e167]: Ruta Fría
+            - term [ref=e168]: Cliente
+            - definition [ref=e169]: Green Market
+            - term [ref=e170]: Condición requerida
+            - definition [ref=e171]: 4 a 7 °C
+          - button "Verificar integridad" [ref=e172] [cursor=pointer]
+      - generic [ref=e176]:
+        - generic [ref=e177]:
+          - generic [ref=e178]:
+            - heading "Eventos que requieren atención" [level=2] [ref=e179]
+            - paragraph [ref=e180]: Alarmas del lote seleccionado
+          - generic [ref=e181]: "0"
+        - generic [ref=e182]:
+          - table [ref=e183]:
+            - rowgroup [ref=e184]:
+              - row [ref=e185]:
+                - columnheader "Evento" [ref=e186]
+                - columnheader "Sensor" [ref=e187]
+                - columnheader "Hora" [ref=e188]
+                - columnheader "Temperatura" [ref=e189]
+                - columnheader "Estado" [ref=e190]
+                - columnheader "Acción" [ref=e191]
+            - rowgroup
+          - generic [ref=e606]: Sin alarmas registradas para este lote.
+      - generic [ref=e84]:
+        - text: FríoTrack SAS
+        - generic [ref=e85]: Entorno demostrativo con DynamoDB Local · Datos sintéticos

@@ -1,0 +1,23 @@
+{
+  "runId": "2026-10-31T17-38-20-493Z-41208777",
+  "environment": "DynamoDB Local + real HTTP + SQLite on this computer",
+  "mode": "accelerated",
+  "representedOutageSeconds": 3600,
+  "sensors": 12,
+  "intervalSeconds": 30,
+  "expectedReadings": 1440,
+  "tables": {
+    "core": "E2E_2026_10_31T17_38_20_493Z_41208777Core",
+    "telemetry": "E2E_2026_10_31T17_38_20_493Z_41208777TelemetryHot",
+    "ops": "E2E_2026_10_31T17_38_20_493Z_41208777Ops"
+  },
+  "lotId": "TEST-E2E-879784ac",
+  "startedAt": "2026-10-31T17:38:20.493Z",
+  "claims": {
+    "awsTested": false,
+    "fleet4500Validated": false,
+    "independentOffsiteBackup": false
+  },
+  "passed": false,
+  "error": "Error: Timeout waiting for E2E condition\n    at waitUntil (/home/rubxo/Documentos/ChatGPT/BASES DE DATOS/tools/gateway-e2e.ts:38:165)\n    at async boot (/home/rubxo/Documentos/ChatGPT/BASES DE DATOS/tools/gateway-e2e.ts:42:21)\n    at async <anonymous> (/home/rubxo/Documentos/ChatGPT/BASES DE DATOS/tools/gateway-e2e.ts:49:2)"
+}

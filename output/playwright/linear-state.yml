@@ -1,0 +1,360 @@
+- generic [ref=e3]:
+  - complementary [ref=e4]:
+    - link "FríoTrack inicio" [ref=e5] [cursor=pointer]:
+      - /url: /
+      - text: FríoTrack
+    - navigation "Secciones" [ref=e12]:
+      - button "Operación" [ref=e13] [cursor=pointer]
+      - button "Trazabilidad" [ref=e16] [cursor=pointer]
+      - button "Integridad" [ref=e22] [cursor=pointer]
+      - button "Proyecto" [ref=e26] [cursor=pointer]
+    - generic [ref=e30]: DynamoDB Local
+  - main [ref=e37]:
+    - generic [ref=e38]:
+      - generic [ref=e39]:
+        - text: Centro de control
+        - strong [ref=e42]: Operación
+      - generic [ref=e43]:
+        - generic [ref=e44]: Demostración local
+        - generic [ref=e45]: JR
+    - generic [ref=e46]:
+      - generic [ref=e47]:
+        - generic [ref=e48]:
+          - paragraph [ref=e49]: domingo, 25 de octubre de 2026
+          - heading "Cada lote, bajo control." [level=1] [ref=e50]
+          - paragraph [ref=e51]: Supervisa la temperatura y responde a los eventos de tu cadena de frío.
+        - button "Actualizar" [ref=e52] [cursor=pointer]
+      - region "Resumen" [ref=e59]:
+        - generic [ref=e60]:
+          - text: Lotes monitoreados
+          - strong [ref=e61]: "3"
+          - text: Exportaciones en demostración
+        - generic [ref=e66]:
+          - text: Sensores registrados
+          - strong [ref=e67]: "4"
+          - text: Último estado registrado
+        - generic [ref=e70]:
+          - text: Alarmas pendientes
+          - strong [ref=e71]: "26"
+          - text: Abiertas y reconocidas
+        - generic [ref=e74]:
+          - text: Lecturas en pantalla
+          - strong [ref=e75]: "144"
+          - text: Historial del periodo seleccionado
+      - generic [ref=e80]:
+        - heading "Lotes de exportación" [level=2] [ref=e81]
+        - generic [ref=e82]: 3 lotes disponibles
+      - generic [ref=e83]:
+        - button "FT-2026-001 Revisar Rosas de exportación Finca La Sabana 2 sensores 2–8 °C" [pressed] [ref=e86] [cursor=pointer]:
+          - generic [ref=e87]:
+            - text: FT-2026-001
+            - generic [ref=e88]: Revisar
+          - strong [ref=e89]: Rosas de exportación
+          - generic [ref=e90]: Finca La Sabana
+          - generic [ref=e94]:
+            - text: 2 sensores
+            - generic [ref=e95]: 2–8 °C
+        - button "FT-2026-002 Normal Aguacate Hass Finca El Retiro 1 sensores 4–7 °C" [ref=e98] [cursor=pointer]:
+          - generic [ref=e99]:
+            - text: FT-2026-002
+            - generic [ref=e100]: Normal
+          - strong [ref=e101]: Aguacate Hass
+          - generic [ref=e102]: Finca El Retiro
+          - generic [ref=e106]:
+            - text: 1 sensores
+            - generic [ref=e107]: 4–7 °C
+        - button "FT-2026-003 Normal Arándanos Finca Santa Elena 1 sensores 0–4 °C" [ref=e110] [cursor=pointer]:
+          - generic [ref=e111]:
+            - text: FT-2026-003
+            - generic [ref=e112]: Normal
+          - strong [ref=e113]: Arándanos
+          - generic [ref=e114]: Finca Santa Elena
+          - generic [ref=e118]:
+            - text: 1 sensores
+            - generic [ref=e119]: 0–4 °C
+      - generic [ref=e122]:
+        - generic [ref=e123]:
+          - generic [ref=e124]:
+            - generic [ref=e125]:
+              - heading "Temperatura del lote" [level=2] [ref=e126]
+              - paragraph [ref=e127]: Rosas de exportación · Sensor S-001
+            - generic [ref=e128]:
+              - text: Periodo
+              - combobox "Periodo" [ref=e129]:
+                - option "24 horas"
+                - option "48 horas" [selected]
+                - option "7 días"
+                - option "21 días"
+          - generic [ref=e130]: Temperatura registradaRango permitido
+          - img "Gráfica de 72 lecturas de temperatura del lote FT-2026-001" [ref=e133]:
+            - generic [ref=e135]: 0°
+            - generic [ref=e137]: 4°
+            - generic [ref=e139]: 8°
+            - generic [ref=e141]: 12°
+            - generic [ref=e143]: 16°
+            - generic [ref=e146]: 07:00 p. m.
+            - generic [ref=e147]: 06:40 p. m.
+          - generic [ref=e148]:
+            - generic [ref=e149]: Datos sintéticos persistidos en DynamoDB
+            - button "Simular excursión" [ref=e151] [cursor=pointer]
+        - generic [ref=e154]:
+          - heading "Ficha de envío" [level=2] [ref=e155]
+          - heading "Rosas de exportación" [level=3] [ref=e162]
+          - generic [ref=e163]:
+            - term [ref=e164]: Ruta
+            - definition [ref=e165]: Chía → El Dorado → Ámsterdam
+            - term [ref=e166]: Transportador
+            - definition [ref=e167]: Andes Cargo
+            - term [ref=e168]: Cliente
+            - definition [ref=e169]: Flora Europe
+            - term [ref=e170]: Condición requerida
+            - definition [ref=e171]: 2 a 8 °C
+          - button "Verificar integridad" [ref=e172] [cursor=pointer]
+      - generic [ref=e176]:
+        - generic [ref=e177]:
+          - generic [ref=e178]:
+            - heading "Eventos que requieren atención" [level=2] [ref=e179]
+            - paragraph [ref=e180]: Alarmas del lote seleccionado
+          - generic [ref=e181]: "29"
+        - table [ref=e183]:
+          - rowgroup [ref=e184]:
+            - row [ref=e185]:
+              - columnheader "Evento" [ref=e186]
+              - columnheader "Sensor" [ref=e187]
+              - columnheader "Hora" [ref=e188]
+              - columnheader "Temperatura" [ref=e189]
+              - columnheader "Estado" [ref=e190]
+              - columnheader "Acción" [ref=e191]
+          - rowgroup [ref=e192]:
+            - row [ref=e193]:
+              - cell "Fuera de rango" [ref=e194]
+              - cell "S-001" [ref=e198]
+              - cell "24/10/2026 03:40 p. m." [ref=e199]
+              - cell "8.6 °C" [ref=e200]
+              - cell "Abierta" [ref=e201]
+              - cell [ref=e203]:
+                - button "Reconocer" [ref=e204] [cursor=pointer]
+            - row [ref=e207]:
+              - cell "Fuera de rango" [ref=e208]
+              - cell "S-002" [ref=e212]
+              - cell "24/10/2026 03:40 p. m." [ref=e213]
+              - cell "8.6 °C" [ref=e214]
+              - cell "Abierta" [ref=e215]
+              - cell [ref=e217]:
+                - button "Reconocer" [ref=e218] [cursor=pointer]
+            - row [ref=e221]:
+              - cell "Fuera de rango" [ref=e222]
+              - cell "S-002" [ref=e226]
+              - cell "24/10/2026 03:20 p. m." [ref=e227]
+              - cell "8.7 °C" [ref=e228]
+              - cell "Abierta" [ref=e229]
+              - cell [ref=e231]:
+                - button "Reconocer" [ref=e232] [cursor=pointer]
+            - row [ref=e235]:
+              - cell "Fuera de rango" [ref=e236]
+              - cell "S-001" [ref=e240]
+              - cell "24/10/2026 03:20 p. m." [ref=e241]
+              - cell "8.7 °C" [ref=e242]
+              - cell "Abierta" [ref=e243]
+              - cell [ref=e245]:
+                - button "Reconocer" [ref=e246] [cursor=pointer]
+            - row [ref=e249]:
+              - cell "Fuera de rango" [ref=e250]
+              - cell "S-001" [ref=e254]
+              - cell "24/10/2026 03:00 p. m." [ref=e255]
+              - cell "8.8 °C" [ref=e256]
+              - cell "Abierta" [ref=e257]
+              - cell [ref=e259]:
+                - button "Reconocer" [ref=e260] [cursor=pointer]
+            - row [ref=e263]:
+              - cell "Fuera de rango" [ref=e264]
+              - cell "S-002" [ref=e268]
+              - cell "24/10/2026 03:00 p. m." [ref=e269]
+              - cell "8.8 °C" [ref=e270]
+              - cell "Abierta" [ref=e271]
+              - cell [ref=e273]:
+                - button "Reconocer" [ref=e274] [cursor=pointer]
+            - row [ref=e277]:
+              - cell "Fuera de rango" [ref=e278]
+              - cell "S-001" [ref=e282]
+              - cell "24/10/2026 02:40 p. m." [ref=e283]
+              - cell "8.9 °C" [ref=e284]
+              - cell "Abierta" [ref=e285]
+              - cell [ref=e287]:
+                - button "Reconocer" [ref=e288] [cursor=pointer]
+            - row [ref=e291]:
+              - cell "Fuera de rango" [ref=e292]
+              - cell "S-002" [ref=e296]
+              - cell "24/10/2026 02:40 p. m." [ref=e297]
+              - cell "8.9 °C" [ref=e298]
+              - cell "Abierta" [ref=e299]
+              - cell [ref=e301]:
+                - button "Reconocer" [ref=e302] [cursor=pointer]
+            - row [ref=e305]:
+              - cell "Fuera de rango" [ref=e306]
+              - cell "S-002" [ref=e310]
+              - cell "24/10/2026 02:20 p. m." [ref=e311]
+              - cell "9.0 °C" [ref=e312]
+              - cell "Abierta" [ref=e313]
+              - cell [ref=e315]:
+                - button "Reconocer" [ref=e316] [cursor=pointer]
+            - row [ref=e319]:
+              - cell "Fuera de rango" [ref=e320]
+              - cell "S-001" [ref=e324]
+              - cell "24/10/2026 02:20 p. m." [ref=e325]
+              - cell "9.0 °C" [ref=e326]
+              - cell "Abierta" [ref=e327]
+              - cell [ref=e329]:
+                - button "Reconocer" [ref=e330] [cursor=pointer]
+            - row [ref=e333]:
+              - cell "Fuera de rango" [ref=e334]
+              - cell "S-001" [ref=e338]
+              - cell "20/10/2026 08:16 p. m." [ref=e339]
+              - cell "10.0 °C" [ref=e340]
+              - cell "Abierta" [ref=e341]
+              - cell [ref=e343]:
+                - button "Reconocer" [ref=e344] [cursor=pointer]
+            - row [ref=e347]:
+              - cell "Fuera de rango" [ref=e348]
+              - cell "S-001" [ref=e352]
+              - cell "20/10/2026 08:16 p. m." [ref=e353]
+              - cell "10.0 °C" [ref=e354]
+              - cell "Abierta" [ref=e355]
+              - cell [ref=e357]:
+                - button "Reconocer" [ref=e358] [cursor=pointer]
+            - row [ref=e361]:
+              - cell "Fuera de rango" [ref=e362]
+              - cell "S-001" [ref=e366]
+              - cell "20/10/2026 08:16 p. m." [ref=e367]
+              - cell "10.0 °C" [ref=e368]
+              - cell "Abierta" [ref=e369]
+              - cell [ref=e371]:
+                - button "Reconocer" [ref=e372] [cursor=pointer]
+            - row [ref=e375]:
+              - cell "Fuera de rango" [ref=e376]
+              - cell "S-001" [ref=e380]
+              - cell "20/10/2026 08:16 p. m." [ref=e381]
+              - cell "10.0 °C" [ref=e382]
+              - cell "Abierta" [ref=e383]
+              - cell [ref=e385]:
+                - button "Reconocer" [ref=e386] [cursor=pointer]
+            - row [ref=e389]:
+              - cell "Fuera de rango" [ref=e390]
+              - cell "S-001" [ref=e394]
+              - cell "20/10/2026 08:16 p. m." [ref=e395]
+              - cell "10.0 °C" [ref=e396]
+              - cell "Abierta" [ref=e397]
+              - cell [ref=e399]:
+                - button "Reconocer" [ref=e400] [cursor=pointer]
+            - row [ref=e403]:
+              - cell "Fuera de rango" [ref=e404]
+              - cell "S-001" [ref=e408]
+              - cell "20/10/2026 08:16 p. m." [ref=e409]
+              - cell "10.0 °C" [ref=e410]
+              - cell "Abierta" [ref=e411]
+              - cell [ref=e413]:
+                - button "Reconocer" [ref=e414] [cursor=pointer]
+            - row [ref=e417]:
+              - cell "Fuera de rango" [ref=e418]
+              - cell "S-001" [ref=e422]
+              - cell "20/10/2026 08:16 p. m." [ref=e423]
+              - cell "10.0 °C" [ref=e424]
+              - cell "Abierta" [ref=e425]
+              - cell [ref=e427]:
+                - button "Reconocer" [ref=e428] [cursor=pointer]
+            - row [ref=e431]:
+              - cell "Fuera de rango" [ref=e432]
+              - cell "S-001" [ref=e436]
+              - cell "20/10/2026 08:16 p. m." [ref=e437]
+              - cell "10.0 °C" [ref=e438]
+              - cell "Abierta" [ref=e439]
+              - cell [ref=e441]:
+                - button "Reconocer" [ref=e442] [cursor=pointer]
+            - row [ref=e445]:
+              - cell "Fuera de rango" [ref=e446]
+              - cell "S-001" [ref=e450]
+              - cell "20/10/2026 08:16 p. m." [ref=e451]
+              - cell "10.0 °C" [ref=e452]
+              - cell "Abierta" [ref=e453]
+              - cell [ref=e455]:
+                - button "Reconocer" [ref=e456] [cursor=pointer]
+            - row [ref=e459]:
+              - cell "Fuera de rango" [ref=e460]
+              - cell "S-002" [ref=e464]
+              - cell "20/10/2026 03:40 p. m." [ref=e465]
+              - cell "8.6 °C" [ref=e466]
+              - cell "Cerrada" [ref=e467]
+              - cell "Resuelta" [ref=e469]
+            - row [ref=e470]:
+              - cell "Fuera de rango" [ref=e471]
+              - cell "S-001" [ref=e475]
+              - cell "20/10/2026 03:40 p. m." [ref=e476]
+              - cell "8.6 °C" [ref=e477]
+              - cell "Cerrada" [ref=e478]
+              - cell "Resuelta" [ref=e480]
+            - row [ref=e481]:
+              - cell "Fuera de rango" [ref=e482]
+              - cell "S-002" [ref=e486]
+              - cell "20/10/2026 03:20 p. m." [ref=e487]
+              - cell "8.7 °C" [ref=e488]
+              - cell "Abierta" [ref=e489]
+              - cell [ref=e491]:
+                - button "Reconocer" [ref=e492] [cursor=pointer]
+            - row [ref=e495]:
+              - cell "Fuera de rango" [ref=e496]
+              - cell "S-001" [ref=e500]
+              - cell "20/10/2026 03:20 p. m." [ref=e501]
+              - cell "8.7 °C" [ref=e502]
+              - cell "Abierta" [ref=e503]
+              - cell [ref=e505]:
+                - button "Reconocer" [ref=e506] [cursor=pointer]
+            - row [ref=e509]:
+              - cell "Fuera de rango" [ref=e510]
+              - cell "S-002" [ref=e514]
+              - cell "20/10/2026 03:00 p. m." [ref=e515]
+              - cell "8.8 °C" [ref=e516]
+              - cell "Abierta" [ref=e517]
+              - cell [ref=e519]:
+                - button "Reconocer" [ref=e520] [cursor=pointer]
+            - row [ref=e523]:
+              - cell "Fuera de rango" [ref=e524]
+              - cell "S-001" [ref=e528]
+              - cell "20/10/2026 03:00 p. m." [ref=e529]
+              - cell "8.8 °C" [ref=e530]
+              - cell "Cerrada" [ref=e531]
+              - cell "Resuelta" [ref=e533]
+            - row [ref=e534]:
+              - cell "Fuera de rango" [ref=e535]
+              - cell "S-002" [ref=e539]
+              - cell "20/10/2026 02:40 p. m." [ref=e540]
+              - cell "8.9 °C" [ref=e541]
+              - cell "Abierta" [ref=e542]
+              - cell [ref=e544]:
+                - button "Reconocer" [ref=e545] [cursor=pointer]
+            - row [ref=e548]:
+              - cell "Fuera de rango" [ref=e549]
+              - cell "S-001" [ref=e553]
+              - cell "20/10/2026 02:40 p. m." [ref=e554]
+              - cell "8.9 °C" [ref=e555]
+              - cell "Abierta" [ref=e556]
+              - cell [ref=e558]:
+                - button "Reconocer" [ref=e559] [cursor=pointer]
+            - row [ref=e562]:
+              - cell "Fuera de rango" [ref=e563]
+              - cell "S-002" [ref=e567]
+              - cell "20/10/2026 02:20 p. m." [ref=e568]
+              - cell "9.0 °C" [ref=e569]
+              - cell "Abierta" [ref=e570]
+              - cell [ref=e572]:
+                - button "Reconocer" [ref=e573] [cursor=pointer]
+            - row [ref=e576]:
+              - cell "Fuera de rango" [ref=e577]
+              - cell "S-001" [ref=e581]
+              - cell "20/10/2026 02:20 p. m." [ref=e582]
+              - cell "9.0 °C" [ref=e583]
+              - cell "Abierta" [ref=e584]
+              - cell [ref=e586]:
+                - button "Reconocer" [ref=e587] [cursor=pointer]
+      - generic [ref=e84]:
+        - text: FríoTrack SAS
+        - generic [ref=e85]: Entorno demostrativo con DynamoDB Local · Datos sintéticos

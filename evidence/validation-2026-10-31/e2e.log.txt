@@ -1,0 +1,12 @@
+
+> friotrack@1.0.0 test:e2e
+> tsx tools/gateway-e2e.ts
+
+{
+  "passed": true,
+  "directory": "/home/rubxo/Documentos/ChatGPT/BASES DE DATOS/evidence/gateway-e2e/2026-10-31T17-42-19-893Z-45ab0c43",
+  "readings": 1440,
+  "recoverySeconds": 29.544,
+  "actualOutageSeconds": 7.882,
+  "wallSeconds": 87.462
+}

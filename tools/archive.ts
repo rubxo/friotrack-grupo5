@@ -1,0 +1,27 @@
+import {writerLease} from '../packages/operations/lease.ts';
+const releaseWriter=writerLease('tools/archive.ts');
+process.once('exit',releaseWriter);
+import { mkdir, readFile, writeFile } from 'node:fs/promises';
+import { generateKeyPairSync, sign, verify, createHash } from 'node:crypto';
+import { readings, integrity } from '../apps/api/src/service.ts';
+const directory='.local/archive';
+await mkdir(directory,{recursive:true});
+const lotId=process.argv[2]??'FT-2026-001';
+if(!/^[a-zA-Z0-9_-]{1,80}$/.test(lotId))throw new Error('Lote inválido');
+const day=process.argv[3]??new Date().toISOString().slice(0,10);
+if(!/^\d{4}-\d{2}-\d{2}$/.test(day)||!Number.isFinite(Date.parse(day)))throw new Error('Fecha inválida');
+const from=day+'T00:00:00.000Z',to=day+'T23:59:59.999Z';
+const proof=await integrity(lotId,from,to);
+if(!proof.valid)throw new Error('La cadena está alterada; no se firma el archivo');
+let cursor:string|undefined;const rows:unknown[]=[];
+do{const page=await readings(lotId,from,to,500,cursor,true);rows.push(...page.items);cursor=page.cursor;}while(cursor);
+const bytes=Buffer.from(rows.map(r=>JSON.stringify(r)).join('\n')+'\n');
+let key:string;
+try{key=await readFile(directory+'/signing-private.pem','utf8');}catch(e){if((e as NodeJS.ErrnoException).code!=='ENOENT')throw e;const pair=generateKeyPairSync('ed25519');key=pair.privateKey.export({type:'pkcs8',format:'pem'}).toString();await writeFile(directory+'/signing-private.pem',key,{mode:0o600,flag:'wx'});await writeFile(directory+'/signing-public.pem',pair.publicKey.export({type:'spki',format:'pem'}),{flag:'wx'});}
+const stem=`${directory}/${lotId}-${day}-${Date.now()}`;
+const manifest=JSON.stringify({lotId,day,count:rows.length,sha256:createHash('sha256').update(bytes).digest('hex'),createdAt:new Date().toISOString(),limitation:'Firma local Ed25519. No KMS, Object Lock ni copia independiente.'});
+const signature=sign(null,Buffer.from(manifest),key).toString('base64');
+await writeFile(stem+'.jsonl',bytes,{flag:'wx'});await writeFile(stem+'.manifest.json',JSON.stringify({manifest,signature},null,2),{flag:'wx'});
+const publicKey=await readFile(directory+'/signing-public.pem');
+if(!verify(null,Buffer.from(manifest),publicKey,Buffer.from(signature,'base64')))throw new Error('Firma inválida');
+console.log({stem,readings:rows.length,signatureVerified:true,limitation:'No sustituye respaldo ni archivo inmutable en AWS'});

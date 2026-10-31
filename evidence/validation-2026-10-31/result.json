@@ -1,0 +1,101 @@
+{
+  "at": "2026-10-31T17:46:39.366Z",
+  "unitTests": {
+    "passed": 17,
+    "failed": 0,
+    "log": "unit.log.txt"
+  },
+  "integrationTests": {
+    "passed": 8,
+    "failed": 0,
+    "log": "integration.log.txt"
+  },
+  "build": {
+    "passed": true,
+    "log": "build.log.txt"
+  },
+  "e2e": {
+    "directory": "/home/rubxo/Documentos/ChatGPT/BASES DE DATOS/evidence/gateway-e2e/2026-10-31T17-42-19-893Z-45ab0c43",
+    "representedSeconds": 3600,
+    "actualOutageSeconds": 7.882,
+    "recoverySeconds": 29.544,
+    "readings": 1440,
+    "lost": 0,
+    "duplicates": 0,
+    "replayedFromRestoredPendingQueue": true
+  },
+  "defaultBackup": {
+    "directory": ".local/backups/2026-10-31-demo",
+    "verified": true,
+    "files": {
+      "core.json": {
+        "sha256": "f37b5a7649a4c6580f7cc7c0056c3272c3a6257d25bf8518cfc1b80d14841dda",
+        "bytes": 29438,
+        "rows": 86
+      },
+      "telemetry.json": {
+        "sha256": "5708fb8b96a1fceed22a858f3a7ea9dbbfbcfa39529cacb83026fe421e55ccaf",
+        "bytes": 985775,
+        "rows": 1647
+      },
+      "ops.json": {
+        "sha256": "745995b951b08beaa2aab38234d5e0050f150ddc1c8aa3f0e22565d0a45093b0",
+        "bytes": 2220812,
+        "rows": 3334
+      },
+      "gateway.sqlite": {
+        "sha256": "371dd59cf839fa401c0282883ba8031d5e394344ea043829ff5fd697c67221dc",
+        "bytes": 16384
+      }
+    },
+    "restorePrefix": "RESTORE_demo_20261031"
+  },
+  "smoke": {
+    "health": {
+      "status": "ok",
+      "database": "DynamoDB Local",
+      "production": false
+    },
+    "queue": {
+      "pending": 0,
+      "sent": 1,
+      "quarantined": 0,
+      "capacity": 2400000
+    },
+    "inspectorTables": 27,
+    "firstPage": 25,
+    "secondPage": 25,
+    "pageOverlap": 0,
+    "foreignCursorStatus": 400,
+    "backupRefusesRunningWriters": true
+  },
+  "browserObserved": {
+    "tool": "chrome-devtools",
+    "partitionQueryRows": 6,
+    "partition": "LOT#FT-2026-001",
+    "desktopOverflow": false,
+    "mobileViewportWidth": 390,
+    "mobileOverflow": false
+  },
+  "limitations": [
+    "Accelerated simulation, not 3600 seconds of wall-clock outage",
+    "12 sensors, not fleet capacity validation",
+    "Local backups on same computer; not 3-2-1-1-0",
+    "No AWS deployment or AWS disaster recovery tested"
+  ],
+  "sourceHashes": {
+    "package.json": "0ad831006537b09f4e67dfa4bcbcdf387912889f73092a5eb253bad1f8dc3814",
+    "packages/gateway/index.ts": "10f4542561598c4bb364744bd92ecd33e66047d56f2f07ac1d7eab96637eb58a",
+    "packages/gateway/app.ts": "f376d9932a1ce8e49cd96380869e26238fce4b419908db1c49ff39ea370739a6",
+    "packages/operations/backup.ts": "fa0876db14e66d9c14ea0b123e06d74fd243ba3b2fc786adbad4a7f0c62001bf",
+    "packages/operations/lease.ts": "e8a1569fa516cbbc49b49d857aab67aad2243e92da5882996b6e76b6892a3815",
+    "packages/operations/log.ts": "3965737f79112f479f5738717fffe987596a4db2eb946380788790eb942ac9ff",
+    "apps/api/src/app.ts": "41efd690fd898960dfeb4e1e5a70c8f9d312e21a8d2592fde7031aabc0fbf18f",
+    "tools/gateway-e2e.ts": "0be2fa26a74d4d83bb19cd5634336a71e264c87d1fef70a7ffee1fe9a1c9e382",
+    "tools/admin.ts": "23605ada6ae28929587e58c1de9c804a0ac35cc0e00ad48a907fe72f6d28e73f",
+    "apps/web/src/DatabaseView.tsx": "930d89468ff9e0e4e04a5f95e060bf572d4774784d78e12f880f7bf4d7f91e40",
+    "tests/gateway-http.test.ts": "5643c248b33b44c2e0b450693de0cff1bc251973514cde38b3b408b0a18fa18a",
+    "tests/operations.test.ts": "9a78e0d4988db2bf5be7912dcbcdd453b3dd65698a1ce07b691226cabab69fb7",
+    "tests/integration/api.test.ts": "ce656f700809159bb11f045ab0293d605710b0f210fae96084e012d6c815f389"
+  }
+}

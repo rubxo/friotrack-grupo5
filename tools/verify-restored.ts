@@ -1,0 +1,11 @@
+import {writerLease} from '../packages/operations/lease.ts';
+const release=writerLease('verify-restored');process.once('exit',release);
+import assert from 'node:assert/strict';
+import {verifyBackup} from '../packages/operations/backup.ts';
+import {integrity,ingest} from '../apps/api/src/service.ts';
+import {readingSchema} from '../packages/domain/index.ts';
+const [dir,lotId,from,to]=process.argv.slice(2);
+const {rows}=await verifyBackup(dir);const proof=await integrity(lotId,from,to);assert.equal(proof.valid,true);assert.equal(proof.checked,rows['telemetry.json'].length);
+const sample=rows['telemetry.json'][0];const input=readingSchema.parse(Object.fromEntries(['readingId','lotId','sensorId','observedAt','temperatureC','humidityPct','batteryPct','doorOpen','latitude','longitude'].map(k=>[k,sample[k]])));
+const replay=await ingest(input,'restored-new-key');assert.equal(replay.replayed,true);
+console.log(JSON.stringify({proof,replayAfterRestore:true}));

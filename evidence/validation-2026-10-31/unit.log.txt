@@ -1,0 +1,29 @@
+
+> friotrack@1.0.0 test
+> tsx --test tests/*.test.ts
+
+✔ five-year demand uses mean population and end-year peak (1.456635ms)
+✔ capacity rounding includes 1KB/4KB boundaries and transactional multiplier (0.335307ms)
+✔ rejects impossible sensor values and ambiguous timestamps (3.403313ms)
+✔ hash detects changed measurements regardless of object property ordering (6.154469ms)
+✔ date buckets cover leap day and month boundary (0.769145ms)
+✔ cursor is bound to exact query and rejects tampering (0.744066ms)
+✔ gateway validates HTTP inputs, conflicts and backpressure without losing accepted data (105.617309ms)
+✔ queue survives restart and rejects conflicting idempotency payload (27.411957ms)
+✔ disconnect preserves payload and replay acknowledges only after success (1.480966ms)
+✔ permanent errors are quarantined, never silently discarded (0.528893ms)
+✔ queue backpressure refuses new data instead of deleting pending data (0.532716ms)
+✔ lost acknowledgement can safely replay the original key (0.640465ms)
+✔ operational TypeScript source does not invoke DynamoDB Scan (5.443694ms)
+✔ logs rotate and remain independently parseable JSONL (6.430537ms)
+✔ backup lock refuses active writers and writers refuse maintenance (1.57137ms)
+✔ retryable HTTP errors stay pending; successful replay records delivery metadata (9.236428ms)
+✔ HTTP 202 does not acknowledge a committed reading (0.7965ms)
+ℹ tests 17
+ℹ suites 0
+ℹ pass 17
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 409.641692

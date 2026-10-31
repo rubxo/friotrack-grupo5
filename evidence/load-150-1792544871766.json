@@ -1,0 +1,15 @@
+{
+  "at": "2026-10-21T01:07:51.766Z",
+  "scope": "DynamoDB Local, dos sensores con contención; no representa capacidad AWS",
+  "targetRate": 150,
+  "requestedSeconds": 2,
+  "total": 300,
+  "completed": 0,
+  "statuses": {
+    "400": 300
+  },
+  "elapsedSeconds": 1.9979518859999998,
+  "actualSuccessfulRate": 0,
+  "p50Ms": 5.440628999999944,
+  "p95Ms": 7.716272000000117
+}

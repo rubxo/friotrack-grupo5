@@ -1,0 +1,19 @@
+
+> friotrack@1.0.0 backup
+> tsx tools/backup.ts restore .local/backups/2026-10-31-demo RESTORE_demo_20261031 .local/restored/demo-20261031.sqlite
+
+{
+  "verified": true,
+  "at": "2026-10-31T17:45:31.041Z",
+  "tables": {
+    "core": "RESTORE_demo_20261031Core",
+    "telemetry": "RESTORE_demo_20261031TelemetryHot",
+    "ops": "RESTORE_demo_20261031Ops"
+  },
+  "queueDestination": ".local/restored/demo-20261031.sqlite",
+  "counts": {
+    "core": 86,
+    "telemetry": 1647,
+    "ops": 3334
+  }
+}

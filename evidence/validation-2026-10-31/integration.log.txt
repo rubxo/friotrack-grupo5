@@ -1,0 +1,20 @@
+
+> friotrack@1.0.0 test:integration
+> tsx --test tests/integration/*.test.ts
+
+✔ concurrent duplicate ingestion produces one immutable reading and alarm (266.155041ms)
+✔ reusing an idempotency key with different content fails (12.118596ms)
+✔ out-of-order reading does not move latest sensor timestamp backwards (49.086666ms)
+✔ alarm optimistic version rejects lost updates (28.734368ms)
+✔ pagination returns each reading once and filters expired items before TTL deletion (39.118871ms)
+✔ integrity check detects direct database tampering (19.50272ms)
+✔ bad sensor values and malformed cursors return client errors (3.089391ms)
+✔ a failed transaction leaves no partial reading, marker or chain update (3616.485654ms)
+ℹ tests 8
+ℹ suites 0
+ℹ pass 8
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 4422.892755

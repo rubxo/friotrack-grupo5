@@ -1,0 +1,17 @@
+
+> friotrack@1.0.0 build
+> npm run typecheck && vite build --config apps/web/vite.config.ts
+
+
+> friotrack@1.0.0 typecheck
+> tsc --noEmit
+
+vite v7.3.7 building client environment for production...
+transforming...
+✓ 1579 modules transformed.
+rendering chunks...
+computing gzip size...
+../../dist/web/index.html                   0.47 kB │ gzip:  0.32 kB
+../../dist/web/assets/index-BxBkq0jd.css   11.45 kB │ gzip:  2.94 kB
+../../dist/web/assets/index-BchMe0Bn.js   247.26 kB │ gzip: 77.84 kB
+✓ built in 1.04s

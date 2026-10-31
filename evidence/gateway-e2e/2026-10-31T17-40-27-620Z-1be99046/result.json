@@ -1,0 +1,146 @@
+{
+  "runId": "2026-10-31T17-40-27-620Z-1be99046",
+  "environment": "DynamoDB Local + real HTTP + SQLite on this computer",
+  "mode": "accelerated",
+  "representedOutageSeconds": 3600,
+  "sensors": 12,
+  "intervalSeconds": 30,
+  "expectedReadings": 1440,
+  "tables": {
+    "core": "E2E_2026_10_31T17_40_27_620Z_1be99046Core",
+    "telemetry": "E2E_2026_10_31T17_40_27_620Z_1be99046TelemetryHot",
+    "ops": "E2E_2026_10_31T17_40_27_620Z_1be99046Ops"
+  },
+  "lotId": "TEST-E2E-bddb55cf",
+  "startedAt": "2026-10-31T17:40:27.620Z",
+  "claims": {
+    "awsTested": false,
+    "fleet4500Validated": false,
+    "independentOffsiteBackup": false
+  },
+  "persistedAfterCrash": {
+    "pending": 720,
+    "sent": 0,
+    "quarantined": 0,
+    "capacity": 2400000
+  },
+  "actualOutageSeconds": 7.244,
+  "beforeRecovery": {
+    "status": "ok",
+    "kind": "persistent-local-gateway",
+    "queue": {
+      "pending": 1440,
+      "sent": 0,
+      "quarantined": 0,
+      "capacity": 2400000
+    }
+  },
+  "pendingBackupVerified": true,
+  "recoverySeconds": 29.371,
+  "afterRecovery": {
+    "status": "ok",
+    "kind": "persistent-local-gateway",
+    "queue": {
+      "pending": 0,
+      "sent": 1440,
+      "quarantined": 0,
+      "capacity": 2400000
+    }
+  },
+  "queueAttempts": {
+    "failures": 1032,
+    "maximum": 3
+  },
+  "database": {
+    "count": 1440,
+    "uniqueIds": 1440,
+    "lost": 0,
+    "duplicates": 0,
+    "allPayloadHashesMatch": true,
+    "proof": {
+      "valid": true,
+      "checked": 1440,
+      "chains": 12,
+      "issues": [],
+      "evidence": "Verificación local contra cabezas DynamoDB. npm run archive genera un archivo firmado local, no una copia independiente ni KMS/Object Lock. Verifique periodos cerrados sin ingestión concurrente.",
+      "from": "2026-10-31T00:00:00.000Z",
+      "to": "2026-10-31T23:59:59.999Z"
+    }
+  },
+  "network": {
+    "proxyFailures": 1032,
+    "acknowledgementsDropped": 1,
+    "firstDroppedId": "r-17-8",
+    "replayed": 1,
+    "upstreamCommitted": 1441,
+    "concurrentDuplicates": 8,
+    "conflictStatus": 409
+  },
+  "backup": {
+    "version": 1,
+    "kind": "local-logical-backup",
+    "startedAt": "2026-10-31T17:41:07.167Z",
+    "completedAt": "2026-10-31T17:41:07.620Z",
+    "source": {
+      "core": "E2E_2026_10_31T17_40_27_620Z_1be99046Core",
+      "telemetry": "E2E_2026_10_31T17_40_27_620Z_1be99046TelemetryHot",
+      "ops": "E2E_2026_10_31T17_40_27_620Z_1be99046Ops"
+    },
+    "files": {
+      "core.json": {
+        "sha256": "e65e1eb559c5346601cad6075d1e3134733a2f848bedd136cd304a3dbbde25fe",
+        "bytes": 30853,
+        "rows": 85
+      },
+      "telemetry.json": {
+        "sha256": "3dfdd3941231fef4ce4ad4607ab2ff443d04e11f1e233a6a3d04963f6fe7057f",
+        "bytes": 797054,
+        "rows": 1440
+      },
+      "ops.json": {
+        "sha256": "46051d4af99d06f613b9e247569117157dfec1df1cca92ac68e903251f8d275d",
+        "bytes": 1835900,
+        "rows": 2892
+      },
+      "gateway.sqlite": {
+        "sha256": "b5b8c7feb7e60bebb04dc8c2988ac80751345c93dc211d65033bad6c13038929",
+        "bytes": 618496
+      }
+    },
+    "limitations": "Writers stopped using local leases. Local copies only; no WORM, encryption, offsite or AWS PITR. External writers bypassing this repository must also be stopped."
+  },
+  "restore": {
+    "verified": true,
+    "at": "2026-10-31T17:41:55.540Z",
+    "tables": {
+      "core": "RESTORE_2026_10_31T17_40_27_620Z_1be99046Core",
+      "telemetry": "RESTORE_2026_10_31T17_40_27_620Z_1be99046TelemetryHot",
+      "ops": "RESTORE_2026_10_31T17_40_27_620Z_1be99046Ops"
+    },
+    "queueDestination": "/home/rubxo/Documentos/ChatGPT/BASES DE DATOS/.local/e2e/2026-10-31T17-40-27-620Z-1be99046/restored-gateway.sqlite",
+    "counts": {
+      "core": 85,
+      "telemetry": 1440,
+      "ops": 2892
+    }
+  },
+  "restoredIntegrity": {
+    "proof": {
+      "valid": true,
+      "checked": 1440,
+      "chains": 12,
+      "issues": [],
+      "evidence": "Verificación local contra cabezas DynamoDB. npm run archive genera un archivo firmado local, no una copia independiente ni KMS/Object Lock. Verifique periodos cerrados sin ingestión concurrente.",
+      "from": "2026-10-31T00:00:00.000Z",
+      "to": "2026-10-31T23:59:59.999Z"
+    },
+    "replayAfterRestore": true
+  },
+  "corruptionRejected": true,
+  "expectedPayloadSetHash": "bb5705800b86c2cadc64657b6855c6738ebe97eff67ba13cae14a817f42ed003",
+  "actualPayloadSetHash": "bb5705800b86c2cadc64657b6855c6738ebe97eff67ba13cae14a817f42ed003",
+  "backupDirectory": "/home/rubxo/Documentos/ChatGPT/BASES DE DATOS/.local/e2e/2026-10-31T17-40-27-620Z-1be99046/backup",
+  "finishedAt": "2026-10-31T17:41:56.054Z",
+  "wallSeconds": 88.434,
+  "passed": true
+}
